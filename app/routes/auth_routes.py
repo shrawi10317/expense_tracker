@@ -6,8 +6,20 @@ from app.models.user import User
 from app.forms.auth_forms import RegisterForm
 from app.forms.auth_forms import LoginForm
 from app.forms.expense_form import ExpenseForm
+from functools import wraps
 
 auth_bp = Blueprint('auth', __name__)
+
+
+def login_required(f):
+    @wraps(f)
+    def decorated(*args, **kwargs):
+        user_id = session.get('user_id')
+        if not user_id:
+            return jsonify({"error": "Unauthorized"}), 401
+        return f(user_id=user_id, *args, **kwargs)
+    return decorated
+
 
 
 @auth_bp.route("/")
@@ -61,6 +73,7 @@ def api_register():
 # Dashboard route
 # ------------------------
 @auth_bp.route('/dashboard')
+@login_required
 def dashboard():
     if 'user_id' not in session:
         return redirect('/login')
