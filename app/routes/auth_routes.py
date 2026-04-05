@@ -10,16 +10,16 @@ from functools import wraps
 
 auth_bp = Blueprint('auth', __name__)
 
-
 def login_required(f):
     @wraps(f)
     def decorated(*args, **kwargs):
         user_id = session.get('user_id')
+
         if not user_id:
-            return jsonify({"error": "Unauthorized"}), 401
+            return redirect('/login')   # 🔥 force login
+
         return f(user_id=user_id, *args, **kwargs)
     return decorated
-
 
 
 @auth_bp.route("/")
@@ -74,16 +74,13 @@ def api_register():
 # ------------------------
 @auth_bp.route('/dashboard')
 @login_required
-def dashboard():
-    if 'user_id' not in session:
-        return redirect('/login')
-
+def dashboard(user_id):
     username = session.get('username', 'Guest')
     form = ExpenseForm()
 
     return render_template(
         'dashboard.html',
-        form =form,
+        form=form,
         username=username
     )
 
@@ -96,7 +93,7 @@ def login_page():
 
 @auth_bp.route('/api/login', methods=['POST'])
 def api_login():
-    data = request.get_json()
+    data = request.get_json(silent=True) or request.form.to_dict()
 
     email = data.get('email')
     password = data.get('password')

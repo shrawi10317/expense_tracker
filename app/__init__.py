@@ -2,7 +2,7 @@ from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from config import Config
 import psycopg2
-
+import app
 # 1️⃣ Create db object here (without app)
 db = SQLAlchemy()
 
@@ -27,3 +27,11 @@ def create_app():
     app.register_blueprint(expenses_bp)
 
     return app
+
+
+@app.after_request
+def add_header(response):
+    response.headers["Cache-Control"] = "no-store, no-cache, must-revalidate, max-age=0"
+    response.headers["Pragma"] = "no-cache"
+    response.headers["Expires"] = "0"
+    return response
