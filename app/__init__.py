@@ -1,6 +1,7 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from config import Config
+import psycopg2
 
 # 1️⃣ Create db object here (without app)
 db = SQLAlchemy()
@@ -8,6 +9,12 @@ db = SQLAlchemy()
 def create_app():
     app = Flask(__name__)
     app.config.from_object(Config)
+
+      # DB connection function
+    def get_db_connection():
+        return psycopg2.connect(app.config["DATABASE_URL"])
+
+    app.get_db_connection = get_db_connection
 
     # 2️⃣ Initialize db with app
     db.init_app(app)
