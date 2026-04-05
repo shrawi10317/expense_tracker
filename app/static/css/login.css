@@ -1,0 +1,118 @@
+/* Center wrapper */
+.login-wrapper {
+    min-height: 80vh; /* vertically center */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem; /* prevent card from touching edges on tiny screens */
+}
+
+/* Card styling */
+.login-card {
+    background-color: #ffffff;
+    max-width: 400px;
+    width: 100%;
+    border-radius: 1rem;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    padding: 2rem;
+    transition: all 0.3s ease;
+}
+
+.login-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+/* Heading */
+.login-card h2 {
+    font-weight: 700;
+    color: #007bff; /* blue heading */
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+/* Inputs */
+.login-card .form-control {
+    border-radius: 0.5rem;
+    padding: 0.65rem 0.75rem;
+    font-size: 0.95rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Button */
+.login-card button.btn {
+    border-radius: 0.5rem;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.65rem;
+    background-color: #007bff; /* blue button */
+    border-color: #007bff;
+    color: #fff;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.login-card button.btn:hover {
+    background-color: #0056b3; /* darker blue on hover */
+    border-color: #0056b3;
+}
+
+/* Message */
+#message {
+    font-size: 0.95rem;
+    text-align: center;
+    margin-top: 1rem;
+}
+/* -----------------------------
+   Responsive Login Card (Full Width on Mobile)
+----------------------------- */
+
+/* Extra small devices: <576px */
+@media (max-width: 575.98px) {
+    .login-wrapper {
+        padding: 1rem; /* some space around the card */
+    }
+
+    .login-card {
+        width: 100%;      /* take full available width */
+        max-width: 100%;  /* override max-width */
+        padding: 2rem 1.5rem; /* maintain padding */
+        box-sizing: border-box; /* ensure padding is included */
+    }
+}
+
+/* Small devices: 576px - 767px */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .login-card {
+        max-width: 90%; /* almost full width */
+        padding: 2rem 1.75rem;
+    }
+}
+
+/* Medium devices: 768px - 991px */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .login-card {
+        max-width: 400px; /* keep desktop width */
+    }
+}
+
+/* Extra small devices: <= 400px */
+@media (max-width: 400px) {
+    .login-wrapper {
+        padding: 0.5rem; /* small padding around wrapper */
+    }
+
+    .login-card {
+        width: 100%;       /* full width of screen */
+        max-width: 100%;   /* override max-width */
+        padding: 2rem 1rem; /* reduce horizontal padding slightly */
+        border-radius: 0.75rem; /* keep rounded corners */
+        box-sizing: border-box;  /* include padding in width */
+    }
+
+    .login-card button.btn {
+        font-size: 0.95rem; /* slightly smaller button text for small screens */
+        padding: 0.6rem;
+    }
+}

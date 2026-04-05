@@ -1,0 +1,142 @@
+/* ==========================
+   Center wrapper
+========================== */
+.register-wrapper {
+    min-height: 80vh; /* vertical center */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem; /* add padding for small screens */
+    box-sizing: border-box;
+}
+
+/* ==========================
+   Card Styling
+========================== */
+.register-card {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 400px; /* desktop max */
+    border-radius: 1rem;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    padding: 2rem;
+    transition: all 0.3s ease;
+    box-sizing: border-box; /* include padding in width */
+}
+
+/* Hover effect */
+.register-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+/* ==========================
+   Heading
+========================== */
+.register-card h2 {
+    font-weight: 700;
+    color: #007bff;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.register-card h2 i {
+    color: #007bff;
+}
+
+/* ==========================
+   Inputs
+========================== */
+.register-card .form-control {
+    border-radius: 0.5rem;
+    padding: 0.65rem 0.75rem;
+    font-size: 0.95rem;
+    width: 100%;
+    margin-bottom: 1rem;
+    box-sizing: border-box;
+}
+
+/* ==========================
+   Button
+========================== */
+.register-card button.btn {
+    border-radius: 0.5rem;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.65rem;
+    background-color: #007bff;
+    border-color: #007bff;
+    color: #fff;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.register-card button.btn:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+/* ==========================
+   Message
+========================== */
+#message {
+    font-size: 0.95rem;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+/* ==========================
+   Responsive Tweaks
+========================== */
+
+/* Mobile devices <= 576px */
+@media (max-width: 576px) {
+    .register-wrapper {
+        padding: 1rem;
+    }
+
+    .register-card {
+        max-width: 100%;
+        padding: 2rem 1.5rem;
+    }
+
+    .register-card h2 {
+        font-size: 1.5rem; /* smaller heading for mobile */
+    }
+
+    .register-card .form-control {
+        font-size: 0.9rem;
+        padding: 0.55rem 0.65rem;
+    }
+
+    .register-card button.btn {
+        font-size: 0.95rem;
+        padding: 0.55rem;
+    }
+}
+
+/* Extra small devices <= 400px */
+@media (max-width: 400px) {
+    .register-wrapper {
+        padding: 0.5rem;
+    }
+
+    .register-card {
+        border-radius: 0.8rem; /* keep rounded corners */
+        padding: 1.8rem 1rem;
+    }
+
+    .register-card h2 {
+        font-size: 1.4rem;
+    }
+
+    .register-card .form-control {
+        font-size: 0.85rem;
+        padding: 0.5rem 0.6rem;
+    }
+
+    .register-card button.btn {
+        font-size: 0.9rem;
+        padding: 0.5rem;
+    }
+}

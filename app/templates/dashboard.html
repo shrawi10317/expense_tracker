@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block page_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
+{% endblock %}
+
+{% block content %}
+<h3 class="mb-4 text-primary">Welcome {{ username }} 👋</h3>
+
+<div class="row g-3">
+
+    <!-- Add / Edit Expense -->
+    <div class="col-lg-6">
+        <div class="card p-4 shadow-sm dashboard-card">
+            <h5 class="mb-3 text-primary">Add / Edit Expense</h5>
+            <form id="expenseForm">
+                {{ form.hidden_tag() }}
+                {{ form.amount(class="form-control mb-2", placeholder="Amount", id="amount") }}
+                {{ form.category(class="form-select mb-2", id="category") }}
+                {{ form.description(class="form-control mb-2", placeholder="Description", id="description") }}
+                <input type="hidden" id="expense_id">
+                <button type="button" class="btn btn-primary w-100 mt-2" onclick="saveExpense()">
+                    <i class="bi bi-plus-circle"></i> Save
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Filter & Reports -->
+    <div class="col-lg-6">
+        <div class="card p-4 shadow-sm dashboard-card">
+            <h5 class="mb-3 text-primary">Filter & Reports</h5>
+            <label class="form-label">Filter by Date:</label>
+            <div class="d-flex gap-2 mb-2">
+                <input type="date" id="startDate" class="form-control">
+                <input type="date" id="endDate" class="form-control">
+                <button class="btn btn-primary" onclick="filterExpenses()"><i class="bi bi-funnel-fill"></i> Filter</button>
+            </div>
+            <label class="form-label">Monthly Report:</label>
+            <div class="d-flex gap-2">
+                <input type="month" id="month" class="form-control">
+                <button class="btn btn-warning" onclick="monthlyReport()"><i class="bi bi-file-earmark-text"></i> Generate</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Total Expense -->
+    <div class="col-lg-6">
+        <div class="card p-4 shadow-sm text-center dashboard-card">
+            <h5 class="text-primary">Total Expense</h5>
+            <h2>₹ <span id="total">0</span></h2>
+        </div>
+    </div>
+
+    <!-- Expense List -->
+    <div class="col-lg-6">
+        <div class="card p-4 shadow-sm dashboard-card">
+            <h5 class="text-primary">Expenses</h5>
+            <ul id="list" class="list-group"></ul>
+        </div>
+    </div>
+
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+{% endblock %}
