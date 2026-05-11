@@ -26,21 +26,6 @@ A modern and user-friendly Expense Tracker web application built using Python an
 - CSS3
 - JavaScript
 
----
-
-## 📂 Project Structure
-
-
-expense_tracker/
-│
-├── app/
-├── .gitignore
-├── Procfile
-├── README.md
-├── config.py
-├── create_db.py
-├── requirements.txt
-└── run.py
 ⚙️ Installation
 1️⃣ Clone the repository
 git clone https://github.com/shrawi10317/expense_tracker.git
@@ -75,13 +60,13 @@ python run.py
 ## 📸 Screenshots
 
 ### Dashboard
-<img width="1905" alt="Dashboard" src="https://github.com/user-attachments/assets/4a4f2116-b275-4322-ba97-ee873a208d83" />
+<img width="500" alt="Dashboard" src="https://github.com/user-attachments/assets/4a4f2116-b275-4322-ba97-ee873a208d83" />
 
 ### Login
-<img width="1919" alt="Login" src="https://github.com/user-attachments/assets/baf176d0-827f-438f-a081-0848580acc33" />
+<img width="500" alt="Login" src="https://github.com/user-attachments/assets/baf176d0-827f-438f-a081-0848580acc33" />
 
 ### Add Expenses
-<img width="1761" alt="Add Expenses" src="https://github.com/user-attachments/assets/6fe159a2-38bc-4929-8991-c65270b02f67" />
+<img width="500" alt="Add Expenses" src="https://github.com/user-attachments/assets/6fe159a2-38bc-4929-8991-c65270b02f67" />
 
 🎯 Future Improvements
 Expense analytics and charts
@@ -89,9 +74,3 @@ User authentication system
 Export expenses as PDF/Excel
 Budget planning features
 Dark mode support
-👩‍💻 Author
-
-Shrawani Wankhade
-
-GitHub: shrawi10317
-Portfolio: Portfolio Website
