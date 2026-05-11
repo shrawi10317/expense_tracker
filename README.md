@@ -26,6 +26,8 @@ A modern and user-friendly Expense Tracker web application built using Python an
 - CSS3
 - JavaScript
 
+
+```
 ⚙️ Installation
 1️⃣ Clone the repository
 git clone https://github.com/shrawi10317/expense_tracker.git
@@ -56,6 +58,7 @@ python create_db.py
 7️⃣ Run the application
 python run.py
 
+```
 
 ## 📸 Screenshots
 
@@ -67,6 +70,8 @@ python run.py
 
 ### Add Expenses
 <img width="500" alt="Add Expenses" src="https://github.com/user-attachments/assets/6fe159a2-38bc-4929-8991-c65270b02f67" />
+
+```
 
 🎯 Future Improvements
 Expense analytics and charts
