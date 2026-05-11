@@ -70,20 +70,22 @@ Then run:
 python create_db.py
 7️⃣ Run the application
 python run.py
-🌐 Deployment
+
 
 
 📸 Screenshots
 
 
 ### Dashboard
-![Dashboard](screenshots/dashboard.png)
+<img width="1905" height="915" alt="Screenshot 2026-05-11 100232" src="https://github.com/user-attachments/assets/4a4f2116-b275-4322-ba97-ee873a208d83" />
 
 ### login
-![Dashboard](screenshots/login.png)
+<img width="1919" height="879" alt="Screenshot 2026-05-11 100315" src="https://github.com/user-attachments/assets/baf176d0-827f-438f-a081-0848580acc33" />
+
 
 ###Add expenses
-![Dashboard](screenshots/addExpenses.png)
+<img width="1761" height="891" alt="Screenshot 2026-05-11 095953" src="https://github.com/user-attachments/assets/6fe159a2-38bc-4929-8991-c65270b02f67" />
+
 
 🎯 Future Improvements
 Expense analytics and charts
