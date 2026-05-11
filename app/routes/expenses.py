@@ -104,6 +104,7 @@ def delete_expense(id, user_id):
         return get_expenses()
     except Exception as e:
         return jsonify({"error": str(e)}), 500
+    
 @expenses_bp.route("/api/filter-expenses", methods=["GET"])
 def filter_expenses():
     user_id = session.get("user_id")
