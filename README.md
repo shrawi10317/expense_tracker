@@ -30,7 +30,7 @@ A modern and user-friendly Expense Tracker web application built using Python an
 
 ## 📂 Project Structure
 
-```bash
+
 expense_tracker/
 │
 ├── app/
@@ -72,20 +72,16 @@ python create_db.py
 python run.py
 
 
-
-📸 Screenshots
-
+## 📸 Screenshots
 
 ### Dashboard
-<img width="1905" height="915" alt="Screenshot 2026-05-11 100232" src="https://github.com/user-attachments/assets/4a4f2116-b275-4322-ba97-ee873a208d83" />
+<img width="1905" alt="Dashboard" src="https://github.com/user-attachments/assets/4a4f2116-b275-4322-ba97-ee873a208d83" />
 
-### login
-<img width="1919" height="879" alt="Screenshot 2026-05-11 100315" src="https://github.com/user-attachments/assets/baf176d0-827f-438f-a081-0848580acc33" />
+### Login
+<img width="1919" alt="Login" src="https://github.com/user-attachments/assets/baf176d0-827f-438f-a081-0848580acc33" />
 
-
-###Add expenses
-<img width="1761" height="891" alt="Screenshot 2026-05-11 095953" src="https://github.com/user-attachments/assets/6fe159a2-38bc-4929-8991-c65270b02f67" />
-
+### Add Expenses
+<img width="1761" alt="Add Expenses" src="https://github.com/user-attachments/assets/6fe159a2-38bc-4929-8991-c65270b02f67" />
 
 🎯 Future Improvements
 Expense analytics and charts
